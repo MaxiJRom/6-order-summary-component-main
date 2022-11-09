@@ -1,0 +1,229 @@
+/* ===== HTML reset ====== */
+
+html {
+    font-size: 62, 5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* ======= General styles ====== */
+* {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+/* ======== Colors ========== */
+
+:root {
+    --clr-primary-pale-blue: hsl(225, 100%, 94%);
+    --clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+    --clr-neutral-pale-blue: hsl(225, 100%, 98%);
+    --clr-neutral-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+/* ======== Typography ======= */
+
+.center {
+    text-align: center;
+}
+
+.regular {
+    font-weight: 500;
+}
+
+.semi-bold {
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.font-dark-blue {
+    color: var(--clr-neutral-dark-blue);
+}
+
+.font-desaturated-blue {
+    color: var(--clr-neutral-desaturated-blue);
+}
+
+.font-pale-blue {
+    color: var(--clr-neutral-pale-blue);
+}
+
+.font-bright-blue {
+    color: var(--clr-primary-bright-blue);
+}
+
+
+/* ======== Layout ======= */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.price__img {
+    grid-row: 1/3;
+}
+
+.price h2 {
+    grid-column: 2 / 4;
+}
+
+.price p {
+    /* grid-row: 2 / 3; */
+    grid-column: 2 / 4;
+}
+
+.price__change {
+    grid-row: 1/3;
+    grid-column: 4/5;
+}
+
+.price__img,
+.price__change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Component styles ====== */
+main{
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--clr-primary-pale-blue);
+}
+
+.card {
+    min-height: 37rem;
+    max-width: 23rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin:20px 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px #ccc;
+}
+
+.card>img {
+    width: 100%;
+    min-height: 10rem;
+    object-fit: cover;
+}
+
+.card__info {
+    padding: 2rem;
+}
+
+.card__info >p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.price {
+    padding: 0.5rem 0;
+    background-color: var(--clr-neutral-pale-blue);
+    border-radius: 0.5rem;
+}
+
+.price p, .price h2{
+    font-size: 0.9rem;
+}
+
+.price a{
+    font-size: 0.75rem;
+}
+
+.price a:hover{
+    color:var(--clr-neutral-desaturated-blue);
+}
+
+.card__info button {
+    background-color: var(--clr-primary-bright-blue);
+    line-height: 3;
+    border-radius: 0.5rem;
+}
+
+.card__info button a {
+    text-decoration: none;
+}
+
+.card__info button:hover{
+    background-color: var(--clr-neutral-desaturated-blue);
+    cursor: pointer;
+}
+
+.card__info > a{
+    line-height: 2.5;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.card__info >a:hover{
+    color: var(--clr-neutral-dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* ===== media queries ====== */
+
+@media (min-width: 400) {
+ 
+}
